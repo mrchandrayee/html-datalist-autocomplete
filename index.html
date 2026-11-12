@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1d1d27">
+  <title>HTML Auto Complete — Datalist Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="demo">
+    <header class="heading">
+      <h1>HTML AUTO COMPLETE</h1>
+      <span class="label">INPUT</span>
+    </header>
+
+    <section class="input-area" aria-label="Ice cream flavor autocomplete example">
+      <div class="input-wrap">
+        <input
+          id="flavorInput"
+          type="text"
+          placeholder=""
+          autocomplete="off"
+          aria-label="Choose an ice cream flavor"
+          aria-autocomplete="list"
+          aria-controls="suggestions"
+          aria-expanded="false"
+        >
+        <datalist id="ice-cream-flavors">
+          <option value="Chocolate"></option>
+          <option value="Coconut"></option>
+          <option value="Mint"></option>
+          <option value="Strawberry"></option>
+          <option value="Vanilla"></option>
+        </datalist>
+        <button class="dropdown-toggle" id="dropdownToggle" type="button" aria-label="Show flavor suggestions">▾</button>
+        <ul class="suggestions" id="suggestions" role="listbox" hidden></ul>
+      </div>
+      <svg class="curly-arrow" viewBox="0 0 42 82" aria-hidden="true">
+        <path d="M25 4 C7 8 10 22 26 29 C41 36 34 48 19 52 C7 56 8 68 24 73" />
+        <path d="M17 66 L25 74 L17 80" />
+      </svg>
+    </section>
+
+    <section class="code-card" aria-label="HTML source code example">
+      <div class="window-controls"><i></i><i></i><i></i></div>
+      <div class="code-lines">
+        <div><span class="tag">&lt;datalist</span> <span class="attr">id</span>=<span class="value">"ice-cream-flavors"</span><span class="tag">&gt;</span></div>
+        <div class="indent"><span class="tag">&lt;option</span> <span class="attr">value</span>=<span class="value">"Chocolate"</span><span class="tag">&gt;</span></div>
+        <div class="indent"><span class="tag">&lt;option</span> <span class="attr">value</span>=<span class="value">"Coconut"</span><span class="tag">&gt;</span></div>
+        <div class="indent"><span class="tag">&lt;option</span> <span class="attr">value</span>=<span class="value">"Mint"</span><span class="tag">&gt;</span></div>
+        <div class="indent"><span class="tag">&lt;option</span> <span class="attr">value</span>=<span class="value">"Strawberry"</span><span class="tag">&gt;</span></div>
+        <div class="indent"><span class="tag">&lt;option</span> <span class="attr">value</span>=<span class="value">"Vanilla"</span><span class="tag">&gt;</span></div>
+        <div><span class="tag">&lt;/datalist&gt;</span></div>
+      </div>
+      <div class="emoji" aria-hidden="true">😎</div>
+    </section>
+
+    <footer class="credit">
+      <span class="avatar">S</span>
+      <span>@coding.stella</span>
+    </footer>
+    <p class="selection" id="selection" aria-live="polite"></p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
